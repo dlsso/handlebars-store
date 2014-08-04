@@ -2,14 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Untitled</title>
+  <title>Handlebars Store</title>
   <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
+
+	<div id="product-container">
+		
+	</div>
+
+	<ul id="wishList">
+		
+	</ul>
 	
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>
+  <script type="text/javascript" src="http://summer2014-refactoru-students.herokuapp.com/public/samples/products-data.js"></script>
   <script src="main.js"></script>
+  
+  <script id="template" type="text/x-handlebars-template">
+  	<div class="product">
+  		<h2>{{title}}</h2>
+  		<img src={{image}}>
+  		<h4 class="cost"> ${{cost}} </h4>
+  		<button>Add to wish list</button>
+  	<div>
+
+  </script>
+
+
 
 </body>
 </html>
+<!-- 
+script cdn goes underneath jQuery but above main.js
+Script needs an id, this is a templating thing
+<script id=”my-template” type=”text/x-handlebars-template”>
+  <h1>{{title}}</h1>
+  <p>{{message}}</p>
+</script>
+var templateSource = $(#my-tmeplate).html()
+var myTemplate = Handlebars.compile(templateSource)
+var context = {
+  title: ‘Using Handlebars!’,
+  message: ‘This is a message from JS’
+}
+var output = myTemplate( context )
+$(‘body’).append(output);
+var context2 = {
+  title: ‘This is from 2’,
+  message: ‘Hello world from template v2’
+}
+$(‘body’).append( myTemplate (context2) )
+ -->

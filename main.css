@@ -1,0 +1,25 @@
+body{
+	background: #333;
+}
+
+.product{
+	background: #ccc;
+	margin: 40px 0 0 40px;
+	padding: 0 20px 0 20px;
+	border-radius: 10px;
+	width: 400px;
+	display: inline-block;
+}
+
+.product img{
+	display: block;
+	margin: 20px 0 20px 0;
+}
+
+.product .cost{
+	float:left;
+}
+
+.product button{
+	float:right;
+}
