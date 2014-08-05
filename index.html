@@ -13,7 +13,7 @@
 	</div>
 
 	<ul id="wishList">
-		
+		<h3>Wish list</h3>	
 	</ul>
 	
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -23,11 +23,19 @@
   
   <script id="template" type="text/x-handlebars-template">
   	<div class="product">
-  		<h2>{{title}}</h2>
+  		<h2 class="title">{{title}}</h2>
   		<img src={{image}}>
   		<h4 class="cost"> ${{cost}} </h4>
-  		<button>Add to wish list</button>
+  		<button class="addWish">Add to wish list</button>
   	<div>
+
+  </script>
+
+  <script id="wishTemplate" type="text/x-handlebars-template">
+  	<li class="wish-list">
+  		<h4 class="title">{{title}}</h4>
+  		<button class="removeWish">Remove</button>
+  	</li>
 
   </script>
 

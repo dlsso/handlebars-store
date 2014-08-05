@@ -23,3 +23,14 @@ body{
 .product button{
 	float:right;
 }
+
+#wishList{
+	background: #ccc;
+	padding: 20px;
+	margin: 40px;
+	border-radius: 10px;
+}
+
+.wish-list {
+	padding-top: 20px;
+}
